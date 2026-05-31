@@ -1,100 +1,104 @@
-<!DOCTYPE HTML>
-<!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Justin Smallwood's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+	<!DOCTYPE HTML>
+	<!--
+		Story by HTML5 UP
+		html5up.net | @ajlkn
+		Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	-->
+	<html>
+		<head>
+			<title>Justin Smallwood's Portfolio</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+			<link rel="stylesheet" href="assets/css/main.css" />
+			<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		</head>
+		<body class="is-preload">
 
-	<!-- One -->
-	<section class="wrapper style1 align-center">
-		<div class="inner">
-			<section class="orient-center content-align-center">
-				<ul class="actions stacked">
-					<li><a href="index.html" class="button big wide smooth-scroll-middle">Back</a></li>
+		<!-- One -->
+		<section class="wrapper style1 align-center">
+			<div class="inner">
+				<section class="orient-center content-align-center">
+					<ul class="actions stacked">
+						<li><a href="index.html" class="button big wide smooth-scroll-middle">Back</a></li>
+					</ul>
+				</section>
+				<header class="major">
+					<h1><b>Search and Rescue Robot</b></h1>
+				</header>
+				<section class="wrapper style1 align-left">
+					<p>The final group project of "MAE 322: Mechanical Design" is to design and manufacture a Search and Rescue Robot (SaRR). I was enrolled in this course in Fall 2024.
+						The robot traversed a course that included going over a ramp, traveling through a chute, ascending a foot high wall, and delivering a medical kit into a basket.
+						I was responsible for assisting in the coding and manufacturing of the SaRR.
+					</p>
+				</section>
+				<section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
+					<a class="image fit"><img src="images/SaRR_course.png" class="centered-image" alt=""/></a>
+				</section>
+				<section class="wrapper style1 align-left">
+					<p>The robot is 16" x 24" x 10" with five proximity sensors and two cadmium sulfide light sensors. Our design choices were based largely on goals for consistent driveability and mounting the wall obstacle.
+						Two different types of wheels will be utilized: the front wheels will be omni-directional wheels and the back wheels will be traction wheels. 
+						The motors will be connected to the wheels via a pulley and timing belt system. The frame of the robot is made out of 6061 aluminim for its high strength and relatively low weight.
+					</p>
+				</section>
+				<section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
+					<div style="display:flex; gap:1em; justify-content:center; align-items:flex-start;">
+						<img src="images/eng_draw322.png" alt="" style="width:50%; height:auto;"/>
+						<img src="images/drivetrain_mae322.png" alt="" style="width:50%; height:auto;"/>
+					</div>
+				</section>
+				<section class="wrapper style1 align-left">
+					<p>One of the major design challenges of this course was mounting the wall. Our solution to this problem was to design a scissor lift that would grab onto a bar hanging directly over the wall,
+						and have the robot pull itself up and drop onto the floor. It was a requirement of the course to ensure that the robot was durable, so there was little concern that it would break 
+						when hitting the floor. Additionally, two rods were placed at the front of the robot to protect the medical kit container and make sure that the robot would land upright on the ground. The tilt mechanism 
+						and scissor lift were controlled with two leadscrews. I assisted in the design, 3D printing of the supports of the tilting mechanism, and manufacturing of the rods at the front of the robot.
+					</p>
+				</section>
+				<section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
+					<div style="display:flex; gap:1em; justify-content:center; align-items:flex-start;">
+						<img src="images/scissorLift322.png" alt="" style="width:50%; height:auto;"/>
+						<img src="images/scissorPlatform322.png" alt="" style="width:50%; height:auto;"/>
+					</div>
+				</section>
+				<section class="wrapper style1 align-left">
+					<p> The SaRR autonomously traversed the course through the use of a Teensy® USB Development Board (Teensy 4.1). In the code, I created a variable called ActCounter which split the code into
+						five sections based on data collected by the light and proximity sensors. The logic behind the code is listed in the following flowchart:
+					</p>
+				</section>
+				<section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
+					<img src="images/controls322.png" alt="" style="width:60%; height:auto;"/>
+				</section>
+				<section class="wrapper style1 align-left">
+					<p> After a lot of testing, and trial and error, the SaRR was able to autonomously travel through each obstacle in the course.
+					</p>
+				</section>
+				<section class="wrapper style1 align-center video-position-center onscroll-video-fade-in">
+					<video class="fit" controls><source src="images/SarrTraverse1.mp4" type="video/mp4"></video>
+				</section>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="wrapper style1 align-center">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/justin-smallwood" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="mailto: justin_smallwood@hotmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="https://github.com/justin-smallwood" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
 				</ul>
-			</section>
-			<header class="major">
-				<h1><b>Search and Rescue Robot</b></h1>
-			</header>
-			<section class="wrapper style1 align-left">
-				<p>The final group project of "MAE 322: Mechanical Design" is to design and manufacture a Search and Rescue Robot (SaRR). I was enrolled in this course in Fall 2024.
-					The robot traversed a course that included going over a ramp, traveling through a chute, ascending a foot high wall, and delivering a medical kit into a basket.
-					I was responsible for assisting in the coding and manufacturing of the SaRR.
-				</p>
-			</section>
-			<section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
-				<a class="image fit"><img src="images/SaRR_course.png" class="centered-image" alt=""/></a>
-			</section>
-			<section class="wrapper style1 align-left">
-				<p>The robot is 16" x 24" x 10" with five proximity sensors and two cadmium sulfide light sensors. Our design choices were based largely on goals for consistent driveability and mounting the wall obstacle.
-					Two different types of wheels will be utilized: the front wheels will be omni-directional wheels and the back wheels will be traction wheels. 
-					The motors will be connected to the wheels via a pulley and timing belt system. The frame of the robot is made out of 6061 aluminim for its high strength and relatively low weight.
-				</p>
-			</section>
-			<section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
-				<a class="image fit"><img src="images/eng_draw322.png" class="centered-image" alt=""/></a>
-				<a class="image fit"><img src="images/drivetrain_mae322.png" class="centered-image" alt=""/></a>
-			</section>
-			<section class="wrapper style1 align-left">
-				<p>One of the major design challenges of this course was mounting the wall. Our solution to this problem was to design a scissor lift that would grab onto a bar hanging directly over the wall,
-					and have the robot pull itself up and drop onto the floor. It was a requirement of the course to ensure that the robot was durable, so there was little concern that it would break 
-					when hitting the floor. Additionally, two rods were placed at the front of the robot to protect the medical kit container and make sure that the robot would land upright on the ground. The tilt mechanism 
-					and scissor lift were controlled with two leadscrews. I assisted in the design, 3D printing of the supports of the tilting mechanism, and manufacturing of the rods at the front of the robot.
-				</p>
-			</section>
-			<section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
-				<a class="image fit"><img src="images/scissorLift322.png" class="centered-image" alt=""/></a>
-				<a class="image fit"><img src="images/scissorPlatform322.png" class="centered-image" alt=""/></a>
-			</section>
-			<section class="wrapper style1 align-left">
-				<p> The SaRR autonomously traversed the course through the use of a Teensy® USB Development Board (Teensy 4.1). In the code, I created a variable called ActCounter which split the code into
-					five sections based on data collected by the light and proximity sensors. The logic behind the code is listed in the following flowchart:
-				</p>
-			</section>
-			<section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
-				<a class="image small"><img src="images/controls322.png" class="centered-image" alt=""/></a>
-			</section>
-			<section class="wrapper style1 align-left">
-				<p> After a lot of testing, and trial and error, the SaRR was able to autonomously travel through each obstacle in the course.
-				</p>
-			</section>
-			<section class="wrapper style1 align-center video-position-center onscroll-video-fade-in">
-				<video class="fit" controls><source src="images/SarrTraverse1.mp4" type="video/mp4"></video>
-			</section>
+				<p>&copy; Justin Smallwood's Portfolio</p>
+			</div>
+		</footer>
+
 		</div>
-	</section>
 
-	<!-- Footer -->
-	<footer class="wrapper style1 align-center">
-		<div class="inner">
-			<ul class="icons">
-				<li><a href="https://www.linkedin.com/in/justin-smallwood" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-				<li><a href="mailto: justin_smallwood@hotmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
-				<li><a href="https://github.com/justin-smallwood" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-			</ul>
-			<p>&copy; Justin Smallwood's Portfolio</p>
-		</div>
-	</footer>
+			<!-- Scripts -->
+				<script src="assets/js/jquery.min.js"></script>
+				<script src="assets/js/jquery.scrollex.min.js"></script>
+				<script src="assets/js/jquery.scrolly.min.js"></script>
+				<script src="assets/js/browser.min.js"></script>
+				<script src="assets/js/breakpoints.min.js"></script>
+				<script src="assets/js/util.js"></script>
+				<script src="assets/js/main.js"></script>
 
-	</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+		</body>
+	</html>

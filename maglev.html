@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Justin Smallwood's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+	<!-- One -->
+	<section class="wrapper style1 align-center">
+		<div class="inner">
+			<section class="orient-center content-align-center">
+				<ul class="actions stacked">
+					<li><a href="index.html" class="button big wide smooth-scroll-middle">Back</a></li>
+				</ul>
+			</section>
+			<header class="major">
+				<h1><b>Electromagnetic Levitation and Propulsion for Model Trains</b></h1>
+			</header>
+
+			<!-- Overview -->
+			<section class="wrapper style1 align-left">
+				<p>My senior thesis for the Department of Mechanical and Aerospace Engineering at Princeton University
+					investigates how permanent magnets and electromagnetic coils can be coordinated to control the
+					movement of a levitating model train. Using microcontrollers, transistors, and Time-of-Flight (ToF)
+					distance sensors, the project develops a methodology for designing and building a magnetic levitation
+					(maglev) train model inspired by real-world EDS maglev systems used in high-speed rail across Europe
+					and Asia. The thesis was completed as part of MAE 498 and 499 (Senior Independent Work),
+					advised by Professor Craig Arnold.
+				</p></b>
+			</section>
+
+			<!-- Hero image: full track assembly -->
+             <section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
+                <img src="images/fdesign_build_7.jpg" alt="Full maglev track assembly" style="width:70%; height:auto;"/>
+            </section>
+			<section class="wrapper style1 align-left" style="margin-bottom: 2em;"></section>
+
+			<!-- Background -->
+			<section class="wrapper style1 align-left">
+				<h2>Background</h2>
+				<p>Maglev trains offer significant societal benefits through faster travel, sustainable infrastructure,
+					and opportunities for economic expansion. These trains can exceed 310 mph due to the absence of rail
+					friction. There are two main classifications of electromagnetic suspension: Electromagnetic Suspension
+					(EMS), which uses attractive forces, and Electrodynamic Suspension (EDS), which uses repulsive forces.
+					This thesis focuses on modeling an EDS system, in which the train levitates above a U-shaped guideway
+					using repulsive permanent magnets, stabilized and propelled by side-mounted electromagnets driven by
+					a direct current power supply.
+				</p>
+				<p>The primary design inspiration came from a YouTube project by Hyperspace Pirate, in which permanent
+					magnets and evenly spaced solenoids propel a 3D-printed train around a circular track. This thesis
+					extended that concept by attempting to eliminate all physical contact between the train and the track,
+					requiring additional horizontal electromagnetic stabilization.
+				</p>
+			</section>
+
+			<!-- EMS vs EDS diagram -->
+            <section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
+				<img src="images/eds_and_ems_trains.png" alt="EMS vs EDS diagram" style="width:70%; height:auto; clip-path:inset(8% 0 0 0);"/>
+			</section>
+			<section class="wrapper style1 align-left" style="margin-bottom: 2em;"></section>
+
+			<!-- Design Requirements -->
+			<section class="wrapper style1 align-left">
+				<h2>Design Requirements</h2>
+				<p>Three core design requirements were established for the system:</p>
+				<ul>
+					<li><b>Vertical Levitation:</b> The train must not contact the track bottom or exceed the height of the guide rails.</li>
+					<li><b>Horizontal Stability:</b> The train must fit inside the straight and curved segments of the track with adequate side clearance for movement.</li>
+					<li><b>Scalability:</b> The code must be scalable to support the addition of more track segments.</li>
+				</ul>
+				<p>Two design iterations were evaluated across seven requirements covering heat generation, permanent magnet
+					stability, electromagnet stability, individual segment control, sensor integration, and scalability of
+					both the circuit and the physical design.
+				</p>
+			</section>
+
+			<!-- Train and Track Design -->
+			<section class="wrapper style1 align-left">
+				<h2>Train and Track Design</h2>
+				<p>The model train and track were designed entirely in PTC Creo. The train measures 6 in. x 2 in. x 2 in.
+					and features a curved nose inspired by the Japanese SCMaglev to reduce aerodynamic drag. A rear hook
+					allows additional train cars to be coupled to the lead unit. The entire track is 40 in. x 24 in. The U-shaped track has an inner diameter
+					of 4 inches and is divided into 8-inch segments connected by L-shaped interlocking joints with a
+					nominal clearance of 0.01 in. to accommodate 3D printing tolerances.
+				</p>
+				<p>MATLAB code was written to calculate the minimum track width required for the train to traverse curved
+					segments without contacting the guide rails. Grooves beneath each track segment accommodate wiring,
+					and holes at the midpoint of each segment route magnet wires along the guide rails. Permanent magnets
+					are mounted along the bottom of the track for levitation, while electromagnet supports hook over the
+					guide rails on both sides for stability and propulsion.
+				</p>
+			</section>
+
+			<!-- CAD images: train, track segments, electromagnet support -->
+            <section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
+                <div style="display:flex; gap:1em; justify-content:center; align-items:flex-start;">
+                <img src="images/maglev_train.png" alt="CAD model of the maglev train" style="width:32%; height:220px; object-fit:contain;"/>
+                <img src="images/full_track_angled.png" alt="Straight and curved track segments" style="width:32%; height:220px; object-fit:contain;"/>
+                <img src="images/Electromag_holder_straight.png" alt="Electromagnet support CAD model" style="width:32%; height:220px; object-fit:contain;"/>
+            </div>
+            </section>
+
+			<!-- Engineering drawings -->
+			<section class="wrapper style1 align-left">
+				<p>Engineering drawings were produced for the interlocking track joints to create a tight fit,
+					ensuring accurate tolerancing for 3D-printed assembly.
+				</p>
+			</section>
+            <section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
+                <div style="display:flex; gap:1em; justify-content:center; align-items:flex-start;">
+                    <img src="images/track_inside_ledge.png" alt="Engineering drawing of inner track joint" style="width:48%; height:auto; object-fit:contain;"/>
+                    <img src="images/track_outside_ledge.png" alt="Engineering drawing of outer track joint" style="width:48%; height:auto; object-fit:contain;"/>
+                </div>
+            </section>
+			<section class="wrapper style1 align-left" style="margin-bottom: 2em;"></section>
+
+			<!-- Permanent Magnets -->
+			<section class="wrapper style1 align-left">
+				<h2>Permanent Magnet Testing</h2>
+				<p>Two sizes of neodymium magnets were tested. Smaller 0.25 in. diameter grade N35 magnets (1.2 lbf pull
+					force) were evaluated in several configurations, including same-pole orientation and Halbach arrays.
+					Their localized magnetic fields resulted in limited levitation range and positional instability.
+				</p>
+				<p>Larger 1.25 in. diameter grade N30 magnets (18 lbf pull force) performed significantly better due to
+					their broader, more spatially extensive magnetic fields. Two track configurations were tested: a paired
+					arrangement of two magnets and an X-shaped configuration of five magnets. The X-shape used the fewest
+					magnets while minimizing gaps in field coverage, and was selected for the final design.
+				</p>
+			</section>
+
+			<!-- Magnet configuration images -->
+            <section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
+                <div style="display:flex; gap:1em; justify-content:center; align-items:flex-start;">
+                    <img src="images/Magnet_sizes.png" alt="1.25 in. neodymium magnet next to two 0.25 in. magnets" style="width:32%; height:250px; object-fit:contain;"/>
+                    <img src="images/pair_config.jpg" alt="Paired magnet configuration on track" style="width:32%; height:250px; object-fit:contain;"/>
+                    <img src="images/X_config.jpg" alt="X-shaped magnet configuration" style="width:32%; height:250px; object-fit:contain;"/>
+                </div>
+            </section>
+			<section class="wrapper style1 align-left" style="margin-bottom: 2em;"></section>
+
+			<!-- Circuit and Electronics -->
+			<section class="wrapper style1 align-left">
+				<h2>Circuit and Control System</h2>
+				<p>The final circuit design consisted of three VL53L0X Time-of-Flight ToF sensors and six MOSFET modules,
+					with each module driving two electromagnets. Flyback diodes were connected across each MOSFET module
+					to protect the circuit from high-voltage inductive kickback when the electromagnets were switched off.
+					The electromagnet sets were evenly spaced across two straight sections of the track.
+				</p>
+				<p>An Arduino Nano read ToF sensor data directly via I2C, with each sensor assigned a unique address
+					using XSHUT pins. The code implemented three duty cycle levels (50%, 90%, and 100%) to vary
+					electromagnetic field strength based on the train's real-time position. Pressing 'R' or 'L' on a
+					keyboard triggered directional propulsion by boosting the duty cycle of the opposing electromagnet
+					set to 100%.
+				</p>
+			</section>
+
+			<!-- Circuit schematic and architecture images -->
+            <section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
+                <div style="display:flex; gap:1em; justify-content:center; align-items:flex-start;">
+                    <img src="images/falstad.png" alt="System architecture diagram" style="width:32%; height:auto; object-fit:contain;"/>
+                    <img src="images/single_circuit_real1.jpg" alt="Electrical schematic for single electromagnet and MOSFET module" style="width:32%; height:auto; object-fit:contain;"/>
+                    <img src="images/full_circuit.jpg" alt="Front view of electromagnet circuit final assembly" style="width:32%; height:auto; object-fit:contain;"/>
+                </div>
+            </section>
+			<section class="wrapper style1 align-left" style="margin-bottom: 2em;"></section>
+
+			<!-- Electromagnet Design -->
+			<section class="wrapper style1 align-left">
+				<h2>Electromagnet Design</h2>
+				<p>Two magnet wire gauges were evaluated for the electromagnet coils. In the first design iteration,
+					30 AWG wire was used because its smaller diameter allowed a denser coil with more turns per unit
+					length, increasing magnetic field strength. However, the high resistance of 30 AWG wire produced
+					excessive heat, and after approximately 2 seconds of operation the wire emitted smoke and caused
+					deformation of the PLA electromagnet support. Reduced duty cycles (down to 35%) prevented overheating
+					but produced insufficient field strength for stabilization.
+				</p>
+				<p>The second iteration used 20 AWG wire, which showed no signs of thermal failure at a 100% duty cycle
+					and 5 A maximum current. Although the thicker wire limited the number of turns that could fit in the
+					support, a comparable magnetic field strength was achieved. The target horizontal force was calculated
+					using the magnetomotive force equation, with a safety factor of 3 applied to compensate for duty
+					cycle variation. The final design used 50 turns of 20 AWG wire per coil.
+				</p>
+			</section>
+
+			<!-- Wire comparison and electromagnet assembly images -->
+            <section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
+                <div style="display:flex; gap:1em; justify-content:center; align-items:flex-start;">
+                    <img src="images/emagholder_core.jpg" alt="Electromagnet holder with low-carbon steel core" style="width:48%; height:260px; object-fit:contain;"/>
+                    <img src="images/fdesign_build.jpg" alt="Electromagnet assembly on track" style="width:48%; height:260px; object-fit:contain;"/>
+                </div>
+            </section>
+			<section class="wrapper style1 align-left" style="margin-bottom: 2em;"></section>
+
+			<!-- Results -->
+			<section class="wrapper style1 align-left">
+				<h2>Results</h2>
+				<p>Although a fully levitating prototype was not realized, the project yielded valuable insights.
+					The 20 AWG electromagnets met the heat generation requirement but did not produce sufficient field
+					strength to stabilize the train at the center of the track. The permanent magnets similarly could
+					not achieve stable vertical levitation, as the system depended on the horizontal electromagnets
+					first positioning the train at the track centerline.
+				</p>
+				<p>The sensor and control system performed as intended throughout testing. The Arduino successfully read
+					real-time positional changes from the ToF sensors and updated the surrounding electromagnet duty
+					cycles accordingly. Common points of failure were in the corners of the track and in regions of
+					weak magnetic field between permanent magnet pairs.
+				</p>
+			</section>
+
+			<!-- Results photos -->
+            <section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
+                <div style="display:flex; gap:1em; justify-content:center; align-items:flex-start;">
+                    <img src="images/fdesign_build_8.jpg" alt="Full track maglev model during testing" style="width:48%; height:300px; object-fit:contain;"/>
+                    <img src="images/failure1.jpg" alt="Train falling into track corner during testing" style="width:48%; height:300px; object-fit:contain;"/>
+                </div>
+            </section>
+			<section class="wrapper style1 align-left" style="margin-bottom: 2em;"></section>
+
+			<!-- Future Work -->
+			<section class="wrapper style1 align-left">
+				<h2>Future Work</h2>
+				<p>Several directions were identified for future iterations of this project:</p>
+				<ul>
+					<li>Narrowing the track width to bring the train closer to the side electromagnets and increase interaction with the horizontal magnetic fields.</li>
+					<li>Replacing circular permanent track magnets with square magnets to reduce dead spots in the magnetic field coverage.</li>
+					<li>Incorporating a soft iron core to increase electromagnet strength, or sourcing a DC power supply capable of exceeding 5 A.</li>
+					<li>Mounting electromagnets on the floor of the track and integrating Hall effect sensors for real-time vertical stabilization.</li>
+					<li>Exploring an EMS maglev configuration or an AC power supply to more closely replicate conventional maglev operating systems.</li>
+				</ul>
+			</section>
+
+			<!-- Final assembly top view -->
+			<section class="wrapper style1 align-center image-position-center onscroll-image-fade-in">
+                <iframe src="images/smallwood_justin_thesis_filecopy.pdf" width="100%" height="800px" style="border:none;"></iframe>
+            </section>
+
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="wrapper style1 align-center">
+		<div class="inner">
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/justin-smallwood" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				<li><a href="mailto: justin_smallwood@hotmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+				<li><a href="https://github.com/justin-smallwood" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+			<p>&copy; Justin Smallwood's Portfolio</p>
+		</div>
+	</footer>
+
+	</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
